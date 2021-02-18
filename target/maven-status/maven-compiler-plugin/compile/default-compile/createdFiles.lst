@@ -1,0 +1,7 @@
+pojo\PutPlace.class
+pojo\AddPlace.class
+pojo\DeletePlace.class
+java_resources\ExternalData.class
+java_resources\APIResources.class
+pojo\Location.class
+java_resources\Payloads.class

@@ -1,0 +1,451 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-07T19:20:15.239Z",
+        "line": 13,
+        "name": "Validate AddPlaceAPI adds place (with scope check)",
+        "description": "",
+        "id": "validating-place-api-s;validate-addplaceapi-adds-place-(with-scope-check);;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 14435995300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "a valid AddPlaceAPI payload with data 18.383494 10 \"First Line House\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "18.383494",
+                  "offset": 38
+                },
+                {
+                  "val": "10",
+                  "offset": 48
+                },
+                {
+                  "val": "\"First Line House\"",
+                  "offset": 51
+                }
+              ],
+              "location": "step_definitions.PlaceValStepDefinition.an_add_place_api_payload_with_data(double,int,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 16614010500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "AddPlaceAPI request is sent as Post HTTP request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AddPlaceAPI",
+                  "offset": 0
+                },
+                {
+                  "val": "Post",
+                  "offset": 31
+                }
+              ],
+              "location": "step_definitions.PlaceValStepDefinition.request_is_sent_as_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 316001600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "success response is sent back with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 47
+                }
+              ],
+              "location": "step_definitions.PlaceValStepDefinition.response_is_sent_back_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 113991800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "status value in response is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 28
+                }
+              ],
+              "location": "step_definitions.PlaceValStepDefinition.value_in_response_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 117000400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "scope value in response is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "scope",
+                  "offset": 0
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 27
+                }
+              ],
+              "location": "step_definitions.PlaceValStepDefinition.value_in_response_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlace"
+          },
+          {
+            "name": "@OnlyAdd"
+          },
+          {
+            "name": "@Smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-07T19:20:47.674Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2999200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hooks.addPlaceStub()"
+            }
+          }
+        ],
+        "line": 36,
+        "name": "Validate PutPlaceAPI updates place",
+        "description": "",
+        "id": "validating-place-api-s;validate-putplaceapi-updates-place;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 59995500,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "a valid PutPlaceAPI payload with data \"1 Summer walk, USA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1 Summer walk, USA\"",
+                  "offset": 38
+                }
+              ],
+              "location": "step_definitions.PlaceValStepDefinition.a_put_place_api_payload_with_data(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2915998200,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "PutPlaceAPI request is sent as Put HTTP request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "PutPlaceAPI",
+                  "offset": 0
+                },
+                {
+                  "val": "Put",
+                  "offset": 31
+                }
+              ],
+              "location": "step_definitions.PlaceValStepDefinition.request_is_sent_as_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8998900,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "success response is sent back with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 47
+                }
+              ],
+              "location": "step_definitions.PlaceValStepDefinition.response_is_sent_back_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 100001400,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "msg value in response is \"Address successfully updated\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "msg",
+                  "offset": 0
+                },
+                {
+                  "val": "\"Address successfully updated\"",
+                  "offset": 25
+                }
+              ],
+              "location": "step_definitions.PlaceValStepDefinition.value_in_response_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PutPlace"
+          },
+          {
+            "name": "@OnlyPut"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-07T19:20:50.795Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definitions.Hooks.addPlaceStub()"
+            }
+          }
+        ],
+        "line": 50,
+        "name": "Validate DeletePlaceAPI deletes place",
+        "description": "",
+        "id": "validating-place-api-s;validate-deleteplaceapi-deletes-place",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 40002800,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "a valid DeletePlaceAPI request",
+            "match": {
+              "location": "step_definitions.PlaceValStepDefinition.a_valid_delete_place_api_request()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2827115400,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "DeletePlaceAPI request is sent as Delete HTTP request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DeletePlaceAPI",
+                  "offset": 0
+                },
+                {
+                  "val": "Delete",
+                  "offset": 34
+                }
+              ],
+              "location": "step_definitions.PlaceValStepDefinition.request_is_sent_as_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5000800,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "success response is sent back with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 47
+                }
+              ],
+              "location": "step_definitions.PlaceValStepDefinition.response_is_sent_back_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 85002900,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "status value in response is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 28
+                }
+              ],
+              "location": "step_definitions.PlaceValStepDefinition.value_in_response_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlace"
+          },
+          {
+            "name": "@OnlyDelete"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-07T19:20:53.785Z",
+        "line": 57,
+        "name": "Validate GetPlaceAPI does not retrieve place (following DeletePlaceAPI)",
+        "description": "",
+        "id": "validating-place-api-s;validate-getplaceapi-does-not-retrieve-place-(following-deleteplaceapi)",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 14999200,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "a valid GetPlaceAPI request",
+            "match": {
+              "location": "step_definitions.PlaceValStepDefinition.a_valid_get_place_api_request()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2499192700,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "GetPlaceAPI request is sent as Get HTTP request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "GetPlaceAPI",
+                  "offset": 0
+                },
+                {
+                  "val": "Get",
+                  "offset": 31
+                }
+              ],
+              "location": "step_definitions.PlaceValStepDefinition.request_is_sent_as_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7001400,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "fail response is sent back with status code 404",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 44
+                }
+              ],
+              "location": "step_definitions.PlaceValStepDefinition.response_is_sent_back_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 55000900,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "msg value in response is \"Get operation failed, looks like place_id  doesn\u0027t exists\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "msg",
+                  "offset": 0
+                },
+                {
+                  "val": "\"Get operation failed, looks like place_id  doesn\u0027t exists\"",
+                  "offset": 25
+                }
+              ],
+              "location": "step_definitions.PlaceValStepDefinition.value_in_response_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlace"
+          },
+          {
+            "name": "@OnlyGet"
+          }
+        ]
+      }
+    ],
+    "name": "Validating Place API\u0027s",
+    "description": "",
+    "id": "validating-place-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/PlaceValidations.feature",
+    "tags": []
+  }
+]

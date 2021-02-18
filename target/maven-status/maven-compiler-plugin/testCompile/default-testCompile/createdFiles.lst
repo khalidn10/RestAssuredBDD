@@ -1,0 +1,6 @@
+step_definitions\Hooks.class
+test_resources\PlaceReqSpecs.class
+step_definitions\PlaceValStepDefinition.class
+cucumber_options\TestRunner.class
+test_resources\PlaceRespSpecs.class
+test_resources\Utilities.class
